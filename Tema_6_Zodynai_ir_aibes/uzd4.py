@@ -22,6 +22,7 @@ def remove_contact():
     if contact_book.get(contact_name):
         contact_book.pop(contact_name)
         print(f"Contact is removed! ")
+        print(contact_book)
     else:
         print("Contact is not in the book!")
 

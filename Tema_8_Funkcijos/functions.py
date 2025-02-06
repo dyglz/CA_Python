@@ -51,8 +51,7 @@ def exponentation(number_1, number_2):
 # User input and output of the functions
 
 print("Convert °C to °F")
-celsius_to_farenheit(float(input("Enter the temperature in Celsius: "))):
-
+celsius_to_farenheit(float(input("Enter the temperature in Celsius: ")))
 
 print("Convert °F to °C")
 farenheit_to_celsius(float(input("Enter the temperature in Farenheit: ")))
