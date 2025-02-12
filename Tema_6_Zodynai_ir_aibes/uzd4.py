@@ -9,7 +9,7 @@ def add_contact():
     try:
         contact_number =int(input("Enter contact's phone number: "))
     except ValueError:
-        print("Contact is not added!")
+        print("Contact is not added! Invalid phone number! ")
         return
 
     contact_book[contact_name] = contact_number
@@ -37,19 +37,17 @@ def search_contact():
 
 
 while True:
-    try:
-        menu_selection = input("Contact Book | Select from menu by typing:\n| search | add | remove | quit | ").lower()
-        if menu_selection == "quit":
-            break
-        elif menu_selection == "add":
-            add_contact()
-        elif menu_selection == "search":
-            search_contact()
-        elif menu_selection == "remove":
-            remove_contact()
-        else:
-            print("Invalid selection!")
 
-    except ValueError:
-        print("Invalid character input! Start over:")
+    menu_selection = input("Contact Book | Select from menu by typing:\n| search | add | remove | quit | ").lower()
+    if menu_selection == "quit":
+        break
+    elif menu_selection == "add":
+        add_contact()
+    elif menu_selection == "search":
+        search_contact()
+    elif menu_selection == "remove":
+        remove_contact()
+    else:
+        print("Invalid selection!")
+
 
