@@ -6,11 +6,11 @@
 
 
 # opt1:
-squared_number = lambda number: number * number
+squared_number = lambda number: number ** 2
 print(squared_number(2))
 
 # opt2:
-squared_number = (lambda number: number * number)(4)
+squared_number = (lambda number: number ** 2)(4)
 print(squared_number)
 
 
