@@ -4,7 +4,10 @@
 # [1, 2, 3, 4]  -> (10, [1, 4, 9, 16])
 
 
-def process_numbers(numbers: list) -> tuple:
+from typing import List, Tuple
+
+
+def process_numbers(numbers: List[int]) -> Tuple:
     square_list = []
     sum = 0
     for i in numbers:

@@ -10,9 +10,13 @@
 # Surikiuokite žodyną pagal žodžių dažnį, 
 # mažėjimo tvarka, ir atspausdinkite rezultatus.
 
+import string
 
-text_dictionary = {}
-
+def normalize_text(text_to_count: str) -> str:
+    text_to_count = text_to_count.replace("'", "")
+    text_to_count = text_to_count.translate(str.maketrans("", "", "0123456789"))
+    text_to_count = text_to_count.translate(str.maketrans("", "", string.punctuation))
+    return text_to_count
 
 
 while True:
@@ -20,27 +24,19 @@ while True:
     if text_to_count == "end":
         print("End of program.")
         break
-    
-#     if text_to_count:
-            
+    elif text_to_count == "":
+        print("Nothing entered!")
+        continue
+    elif text_to_count != "":
+        normalized_text = normalize_text(text_to_count)
+        words = normalized_text.split()
+        word_count_dictionary = {}
 
+        for word in words:
+            if word in word_count_dictionary:
+                word_count_dictionary[word] += 1
+            else:
+                word_count_dictionary[word] = 1
 
-
-
-
-
-
-# # Simbolių dažnis simbolių eilutėje
-
-# word_dict = {}
-# user_input = input("Please enter a phrase to count the frequency of each symbol:\n ")
-
-# for character in user_input:
-#     if character in word_dict:
-#         word_dict[character] += 1
-#     else:
-#         word_dict[character] = 1
-
-# # rikiuojame, kad būtų išlaikyta nuosekli tvarka
-# for char, freq in sorted(word_dict.items()):
-#     print(f"{char}: {freq}")
+        for word, freq in sorted(word_count_dictionary.items()):
+            print(f"{word} : {freq}")

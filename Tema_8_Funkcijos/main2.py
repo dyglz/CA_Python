@@ -6,7 +6,10 @@
 # {"Alice": 25, "Bob": 30, "Charlie": 35} -> (30.0, {"Alice": 625, "Bob": 900, "Charlie": 1225})
 
 
-def process_ages(people: dict) -> tuple:
+from typing import Dict, Tuple
+
+
+def process_ages(people: Dict) -> Tuple:
     squared_age = {}
     sum_age = sum(list(people.values()))
     avg_age = sum_age / len(people)

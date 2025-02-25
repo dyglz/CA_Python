@@ -10,6 +10,3 @@ try:
     bmi_calculator(weight, height)
 except ValueError:
     print("Wrong input!")
-
-
-# ar geriau output'a rasyti funkcijoje, ar is isores(grazinant reiksme)
