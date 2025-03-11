@@ -29,3 +29,27 @@ def new_func(a, b, c, d=20, *args, **kwargs) -> None:
         # I do whatever I want with kwargs
         # kwargs is a dictionary
         print(kwargs)
+
+# try/except 
+
+# def a(a, b):
+#     try:
+#         return a+b
+#     except:
+#         print("An exception occured")
+
+# def b(a, b):
+#     try:
+#         return a-b
+#     except:
+#         print("An exception occured")
+
+
+# def anything():
+#     alfa = a(5, 5)
+#     if alfa != None:
+#         raise ("Error happened")
+#     beta = b(5, 5)
+#     return 0
+
+# anything()
