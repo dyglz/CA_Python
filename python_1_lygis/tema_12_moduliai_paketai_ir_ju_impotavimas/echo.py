@@ -1,6 +1,6 @@
 # echo.py
 
-def echo(text: str, repetitions: int = 3) -> str:
+def echo(text: str, repetitions: int = 10) -> str:
     """Realaus aido imitavimas."""
     echoed_text = ""
     for i in range(repetitions, 0, -1):

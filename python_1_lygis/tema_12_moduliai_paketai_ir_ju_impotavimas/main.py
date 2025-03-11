@@ -1,11 +1,11 @@
 
-# 1
-# from calculator import add, sub, prod, div
+1
+from calculator import add, sub, prod, div
 
-# print(sub(2, 2))
-# print(prod(2, 2))
-# print(div(2, 2))
-# print(f"I am addidng 2 and 2: {add(2, 2)}")
+print(sub(2, 2))
+print(prod(2, 2))
+print(div(2, 2))
+print(f"I am addidng 2 and 2: {add(2, 2)}")
 
 
 # 2
