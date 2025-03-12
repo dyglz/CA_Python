@@ -7,3 +7,17 @@
 # panaudokite / ištestuokite savo funkciją.
 
 
+import jokes
+
+print("Random programming joke:")
+print(f"    {jokes.get_random_joke()}\n")
+
+print("Choose a language (e.g., 'en', 'de', 'es'): ")
+language = input("Enter the language: ")
+
+print("Choose a category ('neutral', 'chuck', 'all'): ")
+category = input("Enter the category: ")
+
+joke = jokes.get_random_joke_multilang(language=language, category=category)
+print("Random programming joke:")
+print(f"    {joke}")
